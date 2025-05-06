@@ -16,10 +16,14 @@ jobs:
          steps: 
          - name: step2
            run: echo "hellow from job2"
+
+    job4:
+          Needs: [job1,job2]       
           
     job3:
             runs-on: ubuntu-latest
             steps:
             - name: step 3
-              run: echo "hello from job 3"   
+              run: echo "hello from job 3"
+
 
