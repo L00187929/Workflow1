@@ -25,6 +25,8 @@ jobs:
 
     job4:
          name: job4
-         run: echo "i am job 4"
+         run-on: ubuntu-latest
+         steps:
          - name: step4
-         Needs: [job1,job2]
+           Needs: [job1,job2]
+           run: echo "i am job 4"
